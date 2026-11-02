@@ -9,7 +9,7 @@ $ringkasan = $pdo->query(
         (SELECT COALESCE(SUM(total_bayar), 0) FROM transaksi_penjualan WHERE status_pembayaran = 'paid') AS pendapatan,
         (SELECT COUNT(*) FROM transaksi_penjualan) AS jumlah_transaksi,
         (SELECT COUNT(*) FROM customer WHERE status_customer = 1) AS jumlah_customer,
-        (SELECT COUNT(*) FROM suku_cadang WHERE status_produk = 1 AND stok_saat_ini <= stok_minimum) AS stok_menipis"
+        (SELECT COUNT(*) FROM suku_cadang WHERE status_produk = 1 AND COALESCE(stok_saat_ini, 0) <= stok_minimum) AS stok_menipis"
 )->fetch();
 
 $terbaru = $pdo->query(
@@ -25,7 +25,7 @@ $menipis = $pdo->query(
     'SELECT kode_suku_cadang, nama_suku_cadang, stok_saat_ini, stok_minimum
        FROM suku_cadang
       WHERE status_produk = 1
-      ORDER BY (stok_saat_ini - stok_minimum) ASC
+      ORDER BY (COALESCE(stok_saat_ini, 0) - stok_minimum) ASC
       LIMIT 7'
 )->fetchAll();
 

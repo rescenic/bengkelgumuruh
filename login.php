@@ -41,11 +41,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login · <?= APP_NAME ?></title>
     <link rel="stylesheet" href="assets/css/style.css">
+<?php require __DIR__ . '/includes/pwa_head.php'; ?>
 </head>
 <body class="login-page">
 <form class="login-card" method="post">
     <div class="brand">
-        <span class="brand-mark">BG</span>
+        <img class="brand-logo" src="assets/img/logo.svg" alt="Logo Bengkel Gumuruh" width="44" height="44">
         <div>
             <strong><?= APP_NAME ?></strong>
             <small>Sistem Informasi Penjualan Suku Cadang</small>
@@ -69,5 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button class="btn" type="submit">Masuk</button>
     <p class="hint" style="margin-top:14px">Akun utama: mridwanh@bengkelgumuruh.rf.gd</p>
 </form>
+<script src="assets/js/pwa.js"></script>
 </body>
 </html>

@@ -19,6 +19,7 @@ PJJ Informatika, Universitas Siber Muhammadiyah.
 | Riwayat Stok | Jejak `stok_movement` setiap barang masuk/keluar |
 | Master data | Suku cadang (tambah/ubah/nonaktifkan), customer (tambah/ubah), vendor, mekanik |
 | **Pencarian AJAX** | Semua halaman daftar mencari secara langsung saat mengetik (fetch + debounce 300 ms, tanpa reload) |
+| **PWA** | Bisa dipasang seperti aplikasi (manifest, service worker, ikon, halaman offline, tombol Pasang Aplikasi) |
 
 Penyimpanan transaksi penjualan (`functions/penjualan.php` → `simpanTransaksiPenjualan()`) berjalan dalam satu
 transaksi database: mengunci stok (`SELECT … FOR UPDATE`), menyimpan header & detail, mengurangi stok,
@@ -67,6 +68,18 @@ Semua akun memakai password awal `password` — segera ganti setelah login perta
 | ahmad.fauzi@bengkelgumuruh.rf.gd | Super Admin |
 | siti.nurhaliza@bengkelgumuruh.rf.gd | Bendahara |
 | budi.setiawan@bengkelgumuruh.rf.gd | Kasir |
+
+## Progressive Web App (PWA)
+
+- `manifest.json`: nama, ikon, warna tema, dan pintasan (Transaksi Baru, Suku Cadang).
+- `sw.js`: menyimpan aset statis (CSS, JS, ikon) di cache. Halaman PHP tidak di-cache karena berisi
+  data transaksi dan sesi login. Saat offline, yang tampil adalah `offline.html`.
+- `assets/js/pwa.js`: mendaftarkan service worker dan menampilkan tombol **Pasang Aplikasi** di topbar
+  bila peramban mendukung.
+- Ikon ada di `assets/img/` (SVG, 192, 512, maskable, apple-touch-icon) dan `favicon.ico`.
+
+PWA hanya aktif lewat **HTTPS** atau `localhost`. Di InfinityFree, aktifkan SSL gratis lewat Control Panel ›
+SSL/TLS. Jika aset statis diubah, naikkan nilai `VERSI` di `sw.js` agar cache lama diganti.
 
 ## Struktur Folder
 

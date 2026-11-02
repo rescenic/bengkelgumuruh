@@ -30,7 +30,7 @@ if ($kategori !== '') {
     $param[] = $kategori;
 }
 if ($stok === 'rendah') {
-    $sql .= ' AND s.stok_saat_ini <= s.stok_minimum';
+    $sql .= ' AND COALESCE(s.stok_saat_ini, 0) <= s.stok_minimum';
 }
 $sql .= ' ORDER BY s.kode_suku_cadang';
 

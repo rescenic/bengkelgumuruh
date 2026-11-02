@@ -9,12 +9,13 @@ $user = pengguna();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= e($judul ?? 'Dashboard') ?> · <?= APP_NAME ?></title>
     <link rel="stylesheet" href="assets/css/style.css">
+<?php require __DIR__ . '/pwa_head.php'; ?>
 </head>
 <body>
 <div class="layout">
     <aside class="sidebar">
         <div class="brand">
-            <span class="brand-mark">BG</span>
+            <img class="brand-logo" src="assets/img/logo.svg" alt="Logo Bengkel Gumuruh" width="40" height="40">
             <div>
                 <strong><?= APP_NAME ?></strong>
                 <small>Suku Cadang &amp; Servis</small>
@@ -45,6 +46,7 @@ $user = pengguna();
                     <strong><?= e($user['nama_pengguna']) ?></strong>
                     <small><?= e(nama_role((int) $user['role'])) ?></small>
                 </div>
+                <button class="btn btn-light btn-sm" type="button" id="btn-install" hidden>Pasang Aplikasi</button>
                 <a class="btn btn-light btn-sm" href="logout.php">Keluar</a>
             </div>
         </header>

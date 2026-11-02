@@ -1,0 +1,48 @@
+{
+  "id": "./",
+  "name": "Bengkel Gumuruh – Sistem Informasi Suku Cadang",
+  "short_name": "Bengkel Gumuruh",
+  "description": "Penjualan suku cadang, servis, pengadaan, dan stok Bengkel Gumuruh.",
+  "lang": "id",
+  "dir": "ltr",
+  "start_url": "./index.php",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "orientation": "any",
+  "background_color": "#f3f5f9",
+  "theme_color": "#16213a",
+  "categories": ["business", "productivity"],
+  "icons": [
+    { "src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/img/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/img/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Transaksi Baru",
+      "short_name": "Transaksi",
+      "description": "Catat penjualan dan servis baru",
+      "url": "./penjualan_tambah.php",
+      "icons": [{ "src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Suku Cadang",
+      "short_name": "Stok",
+      "description": "Cari suku cadang dan cek stok",
+      "url": "./suku_cadang.php",
+      "icons": [{ "src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/img/screenshot-wide.jpg",
+      "sizes": "1280x768",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Dashboard Bengkel Gumuruh"
+    }
+  ]
+}

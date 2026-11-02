@@ -170,3 +170,42 @@ tbody.loading { opacity: .45; transition: opacity .15s; }
     .content { padding: 0; }
     .card { border: none; }
 }
+
+/* Logo */
+.brand-logo { width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0; display: block; }
+.login-card .brand-logo { width: 44px; height: 44px; }
+
+/* Halaman offline */
+.offline-card { text-align: center; }
+.offline-card img { margin: 0 auto 12px; display: block; border-radius: 16px; }
+.offline-card h1 { font-size: 20px; margin: 0 0 8px; }
+.offline-card .btn { margin-top: 14px; }
+
+/* Tampilan layar kecil (ponsel / aplikasi terpasang) */
+@media (max-width: 860px) {
+    .layout { flex-direction: column; }
+    .sidebar { width: auto; padding: 10px 12px; position: sticky; top: 0; z-index: 10; }
+    .brand { padding: 0 4px 8px; }
+    .sidebar nav { display: flex; gap: 6px; overflow-x: auto; margin-top: 8px; padding-bottom: 4px; }
+    .sidebar nav a { white-space: nowrap; margin: 0; padding: 7px 11px; }
+    .nav-label { display: none; }
+    .topbar { padding: 10px 14px; flex-wrap: wrap; gap: 8px; }
+    .topbar h1 { font-size: 17px; }
+    .user > div { display: none; }
+    .content { padding: 14px; }
+    .footer { padding: 12px 14px; }
+    .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .stat strong { font-size: 18px; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .form-grid .span-2, .form-grid .span-3 { grid-column: span 1; }
+    .card-header { flex-wrap: wrap; }
+    .filters { flex-wrap: wrap; width: 100%; }
+    .filters input, .filters select, .filters .live-search { min-width: 0; flex: 1 1 160px; }
+    .card-body[style*="display:flex"] { flex-direction: column; }
+    .summary { width: 100%; }
+    .invoice-head { flex-direction: column; }
+    .login-card { width: calc(100% - 32px); }
+}
+
+[hidden] { display: none !important; }
