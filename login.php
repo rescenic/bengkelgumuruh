@@ -60,14 +60,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?= csrf_field() ?>
     <div class="field">
         <label for="email">Email</label>
-        <input id="email" type="email" name="email" value="<?= e($email) ?>" placeholder="nama@bengkelgumuruh.com" required autofocus>
+        <input id="email" type="email" name="email" value="<?= e($email) ?>" placeholder="nama@bengkelgumuruh.rf.gd" required autofocus>
     </div>
     <div class="field">
         <label for="password">Password</label>
         <input id="password" type="password" name="password" placeholder="••••••••" required>
     </div>
     <button class="btn" type="submit">Masuk</button>
-    <p class="hint" style="margin-top:14px">Akun utama: mridwanh@bengkelgumuruh.netlify.app</p>
+    <p class="hint" style="margin-top:14px">Akun utama: mridwanh@bengkelgumuruh.rf.gd</p>
 </form>
 </body>
 </html>

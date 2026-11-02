@@ -6,6 +6,8 @@ PJJ Informatika, Universitas Siber Muhammadiyah.
 
 **Penyusun:** Muhammad Ridwan Hakim, S.T. — NIM 20250100219
 
+**Demo online:** https://bengkelgumuruh.rf.gd
+
 ## Fitur
 
 | Modul | Keterangan |
@@ -42,16 +44,29 @@ mencatat `stok_movement`, memperbarui akumulasi customer, lalu `COMMIT` — atau
    Untuk produksi gunakan user `bengkel_app` dari `database/dcl_bengkel_gumuruh.sql`.
 4. Buka `http://localhost/lab_basdat` (atau `http://lab_basdat.test`).
 
+## Deploy ke InfinityFree (bengkelgumuruh.rf.gd)
+
+1. Di Control Panel › **MySQL Databases**, buat database (mis. `if0_XXXXXXXX_bengkel_gumuruh`) dan catat
+   hostname, username, dan password-nya.
+2. Buka **phpMyAdmin** untuk database tersebut › tab **Import** › pilih `database/bengkel_gumuruh.sql`.
+3. Unggah seluruh berkas aplikasi ke folder `htdocs` (File Manager atau FTP).
+4. Di server, salin `config/database.local.example.php` menjadi `config/database.local.php`, lalu isi
+   kredensial dari langkah 1. Berkas ini tidak ikut di-commit.
+5. Buka https://bengkelgumuruh.rf.gd.
+
+> Hosting gratis InfinityFree tidak mengizinkan `CREATE USER`/`GRANT`, sehingga skrip DCL hanya berlaku
+> untuk server MySQL sendiri (mis. Laragon).
+
 ### Akun demo
 
 Semua akun memakai password awal `password` — segera ganti setelah login pertama di lingkungan produksi.
 
 | Email | Role |
 |---|---|
-| **mridwanh@bengkelgumuruh.netlify.app** | Super Admin (akun utama — pemilik) |
-| ahmad.fauzi@bengkelgumuruh.com | Super Admin |
-| siti.nurhaliza@bengkelgumuruh.com | Bendahara |
-| budi.setiawan@bengkelgumuruh.com | Kasir |
+| **mridwanh@bengkelgumuruh.rf.gd** | Super Admin (akun utama — pemilik) |
+| ahmad.fauzi@bengkelgumuruh.rf.gd | Super Admin |
+| siti.nurhaliza@bengkelgumuruh.rf.gd | Bendahara |
+| budi.setiawan@bengkelgumuruh.rf.gd | Kasir |
 
 ## Struktur Folder
 

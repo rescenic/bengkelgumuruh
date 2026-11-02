@@ -5,7 +5,7 @@ INSERT INTO bengkel (
 ) VALUES (
     'Bengkel Gumuruh', 
     'Jl. Gumuruh No. 52, Bandung, Jawa Barat', 
-    'info@bengkelgumuruh.com', 
+    'info@bengkelgumuruh.rf.gd', 
     '081394483625', 
     '12.345.678.9-012.000', 
     'Muhammad Ridwan Hakim', 
@@ -17,16 +17,16 @@ INSERT INTO pengguna (
     nama_pengguna, nik_pengguna, email_pengguna, password, jabatan, role, 
     no_telepon, alamat, tanggal_lahir, id_bengkel
 ) VALUES 
-('Ahmad Fauzi', '3201234567890001', 'ahmad.fauzi@bengkelgumuruh.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Super Admin', 1, '081234567890', 'Jl. Sudirman No. 10', '1985-05-15', 1),
-('Siti Nurhaliza', '3201234567890002', 'siti.nurhaliza@bengkelgumuruh.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Bendahara', 2, '081234567891', 'Jl. Merdeka No. 20', '1987-08-22', 1),
-('Budi Setiawan', '3201234567890003', 'budi.setiawan@bengkelgumuruh.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 3, '081234567892', 'Jl. Pahlawan No. 30', '1990-12-10', 1),
-('Dewi Sartika', '3201234567890004', 'dewi.sartika@bengkelgumuruh.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 3, '081234567893', 'Jl. Kartini No. 40', '1992-03-08', 1),
-('Andi Wijaya', '3201234567890005', 'andi.wijaya@bengkelgumuruh.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 3, '081234567894', 'Jl. Diponegoro No. 50', '1988-11-25', 1),
-('Maya Sari', '3201234567890006', 'maya.sari@bengkelgumuruh.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 3, '081234567895', 'Jl. Gatot Subroto No. 60', '1991-07-14', 1),
-('Rudi Hartono', '3201234567890007', 'rudi.hartono@bengkelgumuruh.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Bendahara', 3, '081234567896', 'Jl. Ahmad Yani No. 70', '1989-04-18', 1),
-('Lina Marlina', '3201234567890008', 'lina.marlina@bengkelgumuruh.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 2, '081234567897', 'Jl. Veteran No. 80', '1986-09-30', 1),
-('Agus Salim', '3201234567890009', 'agus.salim@bengkelgumuruh.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 3, '081234567898', 'Jl. Pemuda No. 90', '1993-01-12', 1),
-('Rina Susanti', '3201234567890010', 'rina.susanti@bengkelgumuruh.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 3, '081234567899', 'Jl. Proklamasi No. 100', '1994-06-05', 1);
+('Ahmad Fauzi', '3201234567890001', 'ahmad.fauzi@bengkelgumuruh.rf.gd', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Super Admin', 1, '081234567890', 'Jl. Sudirman No. 10', '1985-05-15', 1),
+('Siti Nurhaliza', '3201234567890002', 'siti.nurhaliza@bengkelgumuruh.rf.gd', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Bendahara', 2, '081234567891', 'Jl. Merdeka No. 20', '1987-08-22', 1),
+('Budi Setiawan', '3201234567890003', 'budi.setiawan@bengkelgumuruh.rf.gd', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 3, '081234567892', 'Jl. Pahlawan No. 30', '1990-12-10', 1),
+('Dewi Sartika', '3201234567890004', 'dewi.sartika@bengkelgumuruh.rf.gd', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 3, '081234567893', 'Jl. Kartini No. 40', '1992-03-08', 1),
+('Andi Wijaya', '3201234567890005', 'andi.wijaya@bengkelgumuruh.rf.gd', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 3, '081234567894', 'Jl. Diponegoro No. 50', '1988-11-25', 1),
+('Maya Sari', '3201234567890006', 'maya.sari@bengkelgumuruh.rf.gd', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 3, '081234567895', 'Jl. Gatot Subroto No. 60', '1991-07-14', 1),
+('Rudi Hartono', '3201234567890007', 'rudi.hartono@bengkelgumuruh.rf.gd', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Bendahara', 3, '081234567896', 'Jl. Ahmad Yani No. 70', '1989-04-18', 1),
+('Lina Marlina', '3201234567890008', 'lina.marlina@bengkelgumuruh.rf.gd', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 2, '081234567897', 'Jl. Veteran No. 80', '1986-09-30', 1),
+('Agus Salim', '3201234567890009', 'agus.salim@bengkelgumuruh.rf.gd', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 3, '081234567898', 'Jl. Pemuda No. 90', '1993-01-12', 1),
+('Rina Susanti', '3201234567890010', 'rina.susanti@bengkelgumuruh.rf.gd', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kasir', 3, '081234567899', 'Jl. Proklamasi No. 100', '1994-06-05', 1);
 
 INSERT INTO mekanik (
     nama_mekanik, nik_mekanik, no_telepon, alamat, tanggal_lahir, 
