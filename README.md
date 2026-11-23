@@ -69,6 +69,33 @@ Semua akun memakai password awal `password` — segera ganti setelah login perta
 | siti.nurhaliza@bengkelgumuruh.rf.gd | Bendahara |
 | budi.setiawan@bengkelgumuruh.rf.gd | Kasir |
 
+## Mode Demo (akses penuh tanpa login)
+
+Untuk demo atau presentasi, login bisa dimatikan sehingga aplikasi langsung terbuka
+sebagai **Super Admin mridwanh** — semua modul, termasuk Pengadaan (PO), terbuka tanpa
+kredensial.
+
+Pengaturannya ada di `config/demo.php`:
+
+```php
+return [
+    'aktif' => true,                              // true = tanpa login, false = login normal
+    'email' => 'mridwanh@bengkelgumuruh.rf.gd',   // akun yang dipakai sebagai sesi demo
+    'label' => 'Mode Demo',
+];
+```
+
+- `includes/bootstrap.php` mengisi `$_SESSION['pengguna']` dari akun tersebut saat mode demo aktif,
+  sehingga `wajib_login()` dan `wajib_role()` tetap bekerja normal (role Super Admin = akses penuh).
+- `login.php` otomatis dialihkan ke dashboard, dan `logout.php` kembali ke dashboard dengan
+  pesan "Mode demo aktif".
+- Badge **Mode Demo** muncul di topbar sebagai penanda.
+- **Untuk mengembalikan login normal, ubah `'aktif'` menjadi `false`.**
+  Selalu nonaktifkan mode ini di server produksi.
+
+> Catatan: mode demo melewati autentikasi, jadi siapa pun yang bisa menjangkau URL aplikasi
+> memperoleh akses penuh. Jangan dipakai di lingkungan publik/produksi.
+
 ## Progressive Web App (PWA)
 
 - `manifest.json`: nama, ikon, warna tema, dan pintasan (Transaksi Baru, Suku Cadang).
@@ -85,7 +112,7 @@ SSL/TLS. Jika aset statis diubah, naikkan nilai `VERSI` di `sw.js` agar cache la
 
 ```
 ├── assets/            CSS & JavaScript (live search AJAX, kalkulasi form)
-├── config/            Konfigurasi koneksi database
+├── config/            Konfigurasi koneksi database & mode demo
 ├── database/          Dump lengkap + skrip DDL, DML, DCL
 ├── functions/         Logika bisnis (transaksi penjualan)
 ├── includes/          Bootstrap, helper, layout, dukungan AJAX

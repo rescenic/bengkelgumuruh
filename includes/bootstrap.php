@@ -44,3 +44,57 @@ function db(): PDO
 
     return $pdo;
 }
+
+/**
+ * Konfigurasi mode demo (lihat config/demo.php).
+ */
+function demo_konfigurasi(): array
+{
+    static $cfg = null;
+
+    if ($cfg === null) {
+        $file = BASE_PATH . '/config/demo.php';
+        $cfg = is_file($file) ? (array) require $file : [];
+    }
+
+    return $cfg;
+}
+
+/**
+ * True bila mode demo aktif: aplikasi terbuka tanpa login.
+ */
+function demo_aktif(): bool
+{
+    return !empty(demo_konfigurasi()['aktif']);
+}
+
+/**
+ * Mengisi sesi sebagai pengguna demo (Super Admin mridwanh) sehingga
+ * wajib_login() dan wajib_role() tetap berjalan normal.
+ */
+function demo_login_otomatis(): void
+{
+    if (!demo_aktif() || !empty($_SESSION['pengguna'])) {
+        return;
+    }
+
+    $email = demo_konfigurasi()['email'] ?? 'mridwanh@bengkelgumuruh.rf.gd';
+
+    try {
+        $stmt = db()->prepare(
+            'SELECT id, nama_pengguna, email_pengguna, jabatan, role, status
+               FROM pengguna WHERE email_pengguna = ? LIMIT 1'
+        );
+        $stmt->execute([$email]);
+        $akun = $stmt->fetch();
+    } catch (Throwable $e) {
+        // Basis data belum siap — biarkan halaman menampilkan error koneksi.
+        return;
+    }
+
+    if ($akun && (int) $akun['status'] === 1) {
+        $_SESSION['pengguna'] = $akun;
+    }
+}
+
+demo_login_otomatis();

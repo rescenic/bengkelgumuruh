@@ -47,7 +47,11 @@ $user = pengguna();
                     <small><?= e(nama_role((int) $user['role'])) ?></small>
                 </div>
                 <button class="btn btn-light btn-sm" type="button" id="btn-install" hidden>Pasang Aplikasi</button>
-                <a class="btn btn-light btn-sm" href="logout.php">Keluar</a>
+                <?php if (demo_aktif()): ?>
+                    <span class="badge badge-info"><?= e(demo_konfigurasi()['label'] ?? 'Mode Demo') ?></span>
+                <?php else: ?>
+                    <a class="btn btn-light btn-sm" href="logout.php">Keluar</a>
+                <?php endif; ?>
             </div>
         </header>
         <main class="content">
